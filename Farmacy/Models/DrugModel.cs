@@ -8,7 +8,7 @@ namespace Farmacy
         [BsonId]
         public Guid Id { get;  set; }
 
-        public int PoductCode { get;  set; }
+        public int ProductCode { get;  set; }
 
         public string Name { get;  set; }
 

@@ -7,6 +7,8 @@
         public int Number { get; set; }
         
         public int ZipCode { get; set; }
+
+        public int City { get; set; }
     }
 
 

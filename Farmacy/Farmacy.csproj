@@ -109,15 +109,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\AddressModel.cs" />
-    <Compile Include="Models\CartModel.cs" />
-    <Compile Include="Models\DrugModel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogIn.Designer.cs">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddressModel.cs" />
+    <Compile Include="Models\CartModel.cs" />
+    <Compile Include="Models\DrugModel.cs" />
     <Compile Include="Models\InstructionModel.cs" />
     <Compile Include="MongoCRUD.cs" />
     <Compile Include="Models\OrderModel.cs" />
