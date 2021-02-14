@@ -1,0 +1,28 @@
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
+
+namespace Farmacy
+{
+    class DrugModel
+    { 
+        [BsonId]
+        public Guid Id { get;  set; }
+
+        public int PoductCode { get;  set; }
+
+        public string Name { get;  set; }
+
+        public string Manufacturer { get; set; }
+
+        public string Type { get;  set; }
+
+        public InstructionModel Instruction { get; set; }
+
+        public int Quantity { get;  set; }
+
+        public double Price { get; set; }
+    }
+
+
+
+}
