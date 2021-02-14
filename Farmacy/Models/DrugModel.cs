@@ -3,7 +3,7 @@ using System;
 
 namespace Farmacy
 {
-    class DrugModel
+    public class DrugModel
     { 
         [BsonId]
         public Guid Id { get;  set; }

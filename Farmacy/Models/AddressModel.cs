@@ -1,6 +1,6 @@
 ﻿namespace Farmacy
 {
-    class AddressModel
+    public class AddressModel
     { 
         public string Street { get; set; }
 

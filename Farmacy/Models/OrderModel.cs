@@ -2,7 +2,7 @@
 
 namespace Farmacy
 {
-    class OrderModel
+    public class OrderModel
     {
         public DateTime OrderedOn { get; set; }
 

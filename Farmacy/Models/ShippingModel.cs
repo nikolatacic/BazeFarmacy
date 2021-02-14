@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Farmacy
 {
-    class ShippingModel
+    public class ShippingModel
     {
         [BsonId]
         public Guid CustomerId { get; set; }

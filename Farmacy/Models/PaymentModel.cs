@@ -1,6 +1,6 @@
 ﻿namespace Farmacy
 {
-    class PaymentModel 
+    public class PaymentModel 
     { 
         public string Method { get; set; }
 

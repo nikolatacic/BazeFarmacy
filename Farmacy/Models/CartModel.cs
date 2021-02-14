@@ -3,7 +3,7 @@ using System;
 
 namespace Farmacy
 {
-    class CartModel
+    public class CartModel
     {
         [BsonId]
         public Guid Id { get; set; }

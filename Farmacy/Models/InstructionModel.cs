@@ -2,7 +2,7 @@
 
 namespace Farmacy
 {
-    class InstructionModel
+    public class InstructionModel
     {
         public string Dose {get; set; }
         
