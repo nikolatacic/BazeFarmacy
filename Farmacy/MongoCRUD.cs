@@ -28,10 +28,10 @@ namespace Farmacy
             return collection.Find(new BsonDocument()).ToList();
         }
 
-        public T LoadDocumentById<T>(string table, int productCode)
+        public T LoadDocumentById<T>(string table, Guid id)
         {
             var collection = db.GetCollection<T>(table);
-            var filter = Builders<T>.Filter.Eq("ProductCode", productCode);
+            var filter = Builders<T>.Filter.Eq("Id", id);
 
             return collection.Find(filter).First();
         }
