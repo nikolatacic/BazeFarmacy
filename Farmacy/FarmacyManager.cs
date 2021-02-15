@@ -160,5 +160,15 @@ namespace Farmacy
 
             db.DeleteDocument<CartModel>("Carts", c.Id);
         }
+
+        public void upsertDrug(DrugModel drug)
+        {
+            db.UpsertDocument<DrugModel>("Drugs", drug.Id, drug);
+        }
+
+        public void deleteDrug(DrugModel drug)
+        {
+            db.DeleteDocument<DrugModel>("Drugs", drug.Id);
+        }
     }
 }

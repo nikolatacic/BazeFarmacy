@@ -76,5 +76,13 @@ namespace Farmacy
             }
             //focus
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var formAdmin = new FormAdmin();
+            formAdmin.ShowDialog();
+            this.Close();
+        }
     }
 }
