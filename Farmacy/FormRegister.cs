@@ -61,6 +61,7 @@ namespace Farmacy
 
             UserModel user = new UserModel
             {
+                Privileges = 1,
                 Username = tbUsernameReg.Text,
                 Password = tbPasswordReg.Text,
                 FirstName = tbFirstNameReg.Text,

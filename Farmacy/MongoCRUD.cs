@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System;
 using MongoDB.Bson;
 using System.Linq;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace Farmacy
 {
@@ -13,7 +15,32 @@ namespace Farmacy
         public MongoCRUD(string database)
         {
             var client = new MongoClient();
+
+            //client.DropDatabase(database);
+            
             db = client.GetDatabase(database);
+
+            var collectionNames = db.ListCollectionNames().ToList();
+
+            if (!collectionNames.Contains("Users"))
+            {
+                LoadUsersFromJSON();
+            }
+
+            if (!collectionNames.Contains("Drugs"))
+            {
+                LoadDrugsFromJSON();
+            }
+
+            if (!collectionNames.Contains("Carts"))
+            {
+                LoadCartsFromJSON();
+            }
+
+            //if (!collectionNames.Contains("Orders"))
+            //{
+            //    LoadOrdersFromJSON();
+            //}
         }
 
         public void InsertDocument<T>(string table, T document)
@@ -56,8 +83,69 @@ namespace Farmacy
 
             collection.DeleteOne(filter);
         }
+
+        private void LoadUsersFromJSON()
+        {
+            List<UserModel> users;
+
+            using (StreamReader r = new StreamReader("Users.json"))
+            {
+                string jsonUsers = r.ReadToEnd();
+                users = JsonConvert.DeserializeObject<List<UserModel>>(jsonUsers);
+            }
+
+            foreach (var user in users)
+            {
+                InsertDocument<UserModel>("Users", user);
+            }
+        }
+
+        private void LoadDrugsFromJSON()
+        {
+            List<DrugModel> drugs;
+
+            using (StreamReader r = new StreamReader("Drugs.json"))
+            {
+                string jsonDrugs = r.ReadToEnd();
+                drugs = JsonConvert.DeserializeObject<List<DrugModel>>(jsonDrugs);
+            }
+
+            foreach (var drug in drugs)
+            {
+                InsertDocument<DrugModel>("Drugs", drug);
+            }
+        }
+
+        private void LoadOrdersFromJSON()
+        {
+            List<OrderModel> orders;
+
+            using (StreamReader r = new StreamReader("Orders.json"))
+            {
+                string jsonOrders = r.ReadToEnd();
+                orders = JsonConvert.DeserializeObject<List<OrderModel>>(jsonOrders);
+            }
+
+            foreach (var order in orders)
+            {
+                InsertDocument<OrderModel>("Orders", order);
+            }
+        }
+
+        private void LoadCartsFromJSON()
+        {
+            List<CartModel> carts;
+
+            using (StreamReader r = new StreamReader("Carts.json"))
+            {
+                string jsonCarts = r.ReadToEnd();
+                carts = JsonConvert.DeserializeObject<List<CartModel>>(jsonCarts);
+            }
+
+            foreach (var cart in carts)
+            {
+                InsertDocument<CartModel>("Carts", cart);
+            }
+        }
     }
-
-
-
 }

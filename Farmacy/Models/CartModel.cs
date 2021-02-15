@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using System;
+using System.Collections.Generic;
 
 namespace Farmacy
 {
@@ -12,10 +13,10 @@ namespace Farmacy
 
         public int Quantity { get; set; }
 
-        public int Total { get; set; }
+        public double Total { get; set; }
 
-        public DrugModel[] DrugList { get; set; }
-    
+        public List<DrugModel> DrugList { get; set; }
+
     }
 
 

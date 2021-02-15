@@ -12,15 +12,17 @@ namespace Farmacy
 {
     public partial class FormLogIn : Form
     {
+        UserModel user;
         public FormLogIn()
         {
             InitializeComponent();
+            user = new UserModel { Privileges = 0 };
         }
 
         private void openMain()
         {
             this.Hide();
-            var formMain = new FormMain();
+            var formMain = new FormMain(user);
             formMain.ShowDialog();
             this.Close();
         }
@@ -34,8 +36,12 @@ namespace Farmacy
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             //check if username is legit
-            if (FarmacyManager.Instance.logIn(tbUsername.Text, tbPassword.Text))
+            UserModel temp = FarmacyManager.Instance.logIn(tbUsername.Text, tbPassword.Text);
+            if (temp != null)
+            {
+                user = temp;
                 openMain();
+            }
             else
                 lblErrorLogIn.Text = "Username or password is incorrect";
         }

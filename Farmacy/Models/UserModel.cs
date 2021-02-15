@@ -8,6 +8,11 @@ namespace Farmacy
         [BsonId]
         public Guid Id { get; set; }
 
+        [BsonId]
+        public Guid CartId { get; set; }
+
+        public int Privileges { get; set; }
+
         public string Username { get; set; }
 
         public string Password { get; set; }

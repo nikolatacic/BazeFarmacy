@@ -13,13 +13,15 @@ namespace Farmacy
     public partial class FormInformation : Form
     {
         DrugModel drug;
-        public FormInformation(DrugModel d)
+        UserModel user;
+        public FormInformation(UserModel u, DrugModel d)
         {
-            InitializeComponent();
-            drug = d;
 
+            drug = d;
+            user = u;
             label1.Text = drug.Name;
             tbInfo.Text = drug.formatString();
+            InitializeComponent();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -31,7 +33,18 @@ namespace Farmacy
         private void btnCart_Click(object sender, EventArgs e)
         {
             if ((int)nud.Value <= drug.Quantity)
-                FarmacyManager.Instance.addToCart(drug, (int)nud.Value);
+            {
+                //messagebox success! i onda close
+                FarmacyManager.Instance.addToCart(user, drug, (int)nud.Value);
+                string message = "Adding to cart is successfull!";
+                string title = "Sucess";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
             else
                 lblError.Text = "There are not enough products";
         }
