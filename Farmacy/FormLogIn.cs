@@ -16,5 +16,13 @@ namespace Farmacy
         {
             InitializeComponent();
         }
+
+        private void llGuest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            var formMain = new FormMain();
+            formMain.ShowDialog();
+            this.Close();
+        }
     }
 }

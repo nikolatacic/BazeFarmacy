@@ -32,20 +32,21 @@ namespace Farmacy
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.buttonLogIn = new System.Windows.Forms.Button();
-            this.buttonRegister = new System.Windows.Forms.Button();
-            this.linkLabelGuest = new System.Windows.Forms.LinkLabel();
+            this.tbUsername = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.btnLogIn = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.llGuest = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(211, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(194, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.Size = new System.Drawing.Size(124, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Farmacy";
             // 
@@ -67,47 +68,48 @@ namespace Farmacy
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
             // 
-            // textBox1
+            // tbUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.tbUsername.Location = new System.Drawing.Point(200, 104);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(100, 22);
+            this.tbUsername.TabIndex = 3;
             // 
-            // textBox2
+            // tbPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 167);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
+            this.tbPassword.Location = new System.Drawing.Point(200, 167);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(100, 22);
+            this.tbPassword.TabIndex = 4;
             // 
-            // buttonLogIn
+            // btnLogIn
             // 
-            this.buttonLogIn.Location = new System.Drawing.Point(200, 220);
-            this.buttonLogIn.Name = "buttonLogIn";
-            this.buttonLogIn.Size = new System.Drawing.Size(86, 36);
-            this.buttonLogIn.TabIndex = 5;
-            this.buttonLogIn.Text = "Log In";
-            this.buttonLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Location = new System.Drawing.Point(200, 220);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(86, 36);
+            this.btnLogIn.TabIndex = 5;
+            this.btnLogIn.Text = "Log In";
+            this.btnLogIn.UseVisualStyleBackColor = true;
             // 
-            // buttonRegister
+            // btnRegister
             // 
-            this.buttonRegister.Location = new System.Drawing.Point(200, 318);
-            this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(86, 32);
-            this.buttonRegister.TabIndex = 6;
-            this.buttonRegister.Text = "Register";
-            this.buttonRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Location = new System.Drawing.Point(200, 318);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(86, 32);
+            this.btnRegister.TabIndex = 6;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
             // 
-            // linkLabelGuest
+            // llGuest
             // 
-            this.linkLabelGuest.AutoSize = true;
-            this.linkLabelGuest.Location = new System.Drawing.Point(201, 388);
-            this.linkLabelGuest.Name = "linkLabelGuest";
-            this.linkLabelGuest.Size = new System.Drawing.Size(122, 17);
-            this.linkLabelGuest.TabIndex = 7;
-            this.linkLabelGuest.TabStop = true;
-            this.linkLabelGuest.Text = "Continue as guest";
+            this.llGuest.AutoSize = true;
+            this.llGuest.Location = new System.Drawing.Point(201, 388);
+            this.llGuest.Name = "llGuest";
+            this.llGuest.Size = new System.Drawing.Size(122, 17);
+            this.llGuest.TabIndex = 7;
+            this.llGuest.TabStop = true;
+            this.llGuest.Text = "Continue as guest";
+            this.llGuest.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llGuest_LinkClicked);
             // 
             // label4
             // 
@@ -124,11 +126,11 @@ namespace Farmacy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 434);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.linkLabelGuest);
-            this.Controls.Add(this.buttonRegister);
-            this.Controls.Add(this.buttonLogIn);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.llGuest);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnLogIn);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -144,11 +146,11 @@ namespace Farmacy
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button buttonLogIn;
-        private System.Windows.Forms.Button buttonRegister;
-        private System.Windows.Forms.LinkLabel linkLabelGuest;
+        private System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Button btnLogIn;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.LinkLabel llGuest;
         private System.Windows.Forms.Label label4;
     }
 }
