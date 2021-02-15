@@ -73,6 +73,7 @@ namespace Farmacy
             this.Column6});
             this.dgv.Location = new System.Drawing.Point(48, 143);
             this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
             this.dgv.Size = new System.Drawing.Size(803, 311);
