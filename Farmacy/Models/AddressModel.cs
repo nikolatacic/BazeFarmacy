@@ -8,7 +8,9 @@
         
         public int ZipCode { get; set; }
 
-        public int City { get; set; }
+        public string City { get; set; }
+
+        public string Country { get; set; }
     }
 
 

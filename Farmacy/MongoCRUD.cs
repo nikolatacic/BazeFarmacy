@@ -36,6 +36,12 @@ namespace Farmacy
             return collection.Find(filter).First();
         }
 
+        public List<T> LoadDocumentByFilter<T>(string table, FilterDefinition<T> filter)
+        {
+            var collection = db.GetCollection<T>(table);
+            return collection.Find(filter).ToList();
+        }
+
         public void UpsertDocument<T>(string table, Guid id, T document) // ako postoji update-uje ako ne napravi novi
         {
             var collection = db.GetCollection<T>(table);

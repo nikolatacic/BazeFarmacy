@@ -5,8 +5,7 @@ namespace Farmacy
 {
     public class ShippingModel
     {
-        [BsonId]
-        public Guid CustomerId { get; set; }
+        public string CustomerUsername { get; set; }
 
         public string CompanyName { get; set; }
 

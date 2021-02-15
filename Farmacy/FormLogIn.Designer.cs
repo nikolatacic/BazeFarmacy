@@ -38,6 +38,7 @@ namespace Farmacy
             this.btnRegister = new System.Windows.Forms.Button();
             this.llGuest = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblErrorLogIn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -74,22 +75,26 @@ namespace Farmacy
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(100, 22);
             this.tbUsername.TabIndex = 3;
+            this.tbUsername.Click += new System.EventHandler(this.tbUsername_Click);
             // 
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(200, 167);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(100, 22);
             this.tbPassword.TabIndex = 4;
+            this.tbPassword.Click += new System.EventHandler(this.tbPassword_Click);
             // 
             // btnLogIn
             // 
-            this.btnLogIn.Location = new System.Drawing.Point(200, 220);
+            this.btnLogIn.Location = new System.Drawing.Point(200, 232);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(86, 36);
             this.btnLogIn.TabIndex = 5;
             this.btnLogIn.Text = "Log In";
             this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // btnRegister
             // 
@@ -99,6 +104,7 @@ namespace Farmacy
             this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // llGuest
             // 
@@ -120,11 +126,21 @@ namespace Farmacy
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account? Register:";
             // 
+            // lblErrorLogIn
+            // 
+            this.lblErrorLogIn.AutoSize = true;
+            this.lblErrorLogIn.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorLogIn.Location = new System.Drawing.Point(200, 196);
+            this.lblErrorLogIn.Name = "lblErrorLogIn";
+            this.lblErrorLogIn.Size = new System.Drawing.Size(0, 17);
+            this.lblErrorLogIn.TabIndex = 9;
+            // 
             // FormLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 434);
+            this.Controls.Add(this.lblErrorLogIn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.llGuest);
             this.Controls.Add(this.btnRegister);
@@ -152,5 +168,6 @@ namespace Farmacy
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.LinkLabel llGuest;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblErrorLogIn;
     }
 }
