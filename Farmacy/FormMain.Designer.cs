@@ -76,7 +76,7 @@ namespace Farmacy
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(803, 311);
+            this.dgv.Size = new System.Drawing.Size(805, 311);
             this.dgv.TabIndex = 1;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
@@ -85,6 +85,7 @@ namespace Farmacy
             this.Column1.HeaderText = "Product code";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 125;
             // 
             // Column2
@@ -92,6 +93,7 @@ namespace Farmacy
             this.Column2.HeaderText = "Name";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 125;
             // 
             // Column3
@@ -99,6 +101,7 @@ namespace Farmacy
             this.Column3.HeaderText = "Manufacturers";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 125;
             // 
             // Column4
@@ -106,6 +109,7 @@ namespace Farmacy
             this.Column4.HeaderText = "Type";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
             // 
             // Column5
@@ -113,6 +117,7 @@ namespace Farmacy
             this.Column5.HeaderText = "Quantity";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 125;
             // 
             // Column6
@@ -120,6 +125,7 @@ namespace Farmacy
             this.Column6.HeaderText = "Price";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 125;
             // 
             // tbProductCode

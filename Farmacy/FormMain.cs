@@ -69,11 +69,10 @@ namespace Farmacy
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (user.Privileges > 0)
-            {
-                var formInformation = new FormInformation(user, listOfDrugs[e.RowIndex]);
-                formInformation.ShowDialog();
-            }
+            if(user.Privileges > 0) {
+            var formInformation = new FormInformation(user, listOfDrugs[e.RowIndex]);
+            formInformation.ShowDialog();
+
             //focus
         }
     }

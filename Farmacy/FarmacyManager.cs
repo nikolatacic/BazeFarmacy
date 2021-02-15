@@ -55,6 +55,8 @@ namespace Farmacy
 
             var users = db.LoadDocumentByFilter("Users", filter);
 
+            if (users.Count == 0)
+                return null;
             return users.First();
         }
 
