@@ -56,8 +56,8 @@ namespace Farmacy
             // 
             this.btnReg.Location = new System.Drawing.Point(158, 336);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(75, 23);
-            this.btnReg.TabIndex = 1;
+            this.btnReg.Size = new System.Drawing.Size(75, 32);
+            this.btnReg.TabIndex = 0;
             this.btnReg.Text = "Register";
             this.btnReg.UseVisualStyleBackColor = true;
             this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
@@ -68,7 +68,7 @@ namespace Farmacy
             this.tbUsernameReg.Location = new System.Drawing.Point(42, 48);
             this.tbUsernameReg.Name = "tbUsernameReg";
             this.tbUsernameReg.Size = new System.Drawing.Size(100, 22);
-            this.tbUsernameReg.TabIndex = 2;
+            this.tbUsernameReg.TabIndex = 1;
             this.tbUsernameReg.Enter += new System.EventHandler(this.tbUsernameReg_Enter);
             this.tbUsernameReg.Leave += new System.EventHandler(this.tbUsernameReg_Leave);
             // 
@@ -77,7 +77,7 @@ namespace Farmacy
             this.tbPasswordReg.Location = new System.Drawing.Point(42, 103);
             this.tbPasswordReg.Name = "tbPasswordReg";
             this.tbPasswordReg.Size = new System.Drawing.Size(100, 22);
-            this.tbPasswordReg.TabIndex = 3;
+            this.tbPasswordReg.TabIndex = 2;
             this.tbPasswordReg.Enter += new System.EventHandler(this.tbPasswordReg_Enter);
             this.tbPasswordReg.Leave += new System.EventHandler(this.tbPasswordReg_Leave);
             // 
@@ -86,7 +86,7 @@ namespace Farmacy
             this.tbFirstNameReg.Location = new System.Drawing.Point(42, 159);
             this.tbFirstNameReg.Name = "tbFirstNameReg";
             this.tbFirstNameReg.Size = new System.Drawing.Size(100, 22);
-            this.tbFirstNameReg.TabIndex = 4;
+            this.tbFirstNameReg.TabIndex = 3;
             this.tbFirstNameReg.Enter += new System.EventHandler(this.tbFirstNameReg_Enter);
             this.tbFirstNameReg.Leave += new System.EventHandler(this.tbFirstNameReg_Leave);
             // 
@@ -95,7 +95,7 @@ namespace Farmacy
             this.tbLastNameReg.Location = new System.Drawing.Point(42, 214);
             this.tbLastNameReg.Name = "tbLastNameReg";
             this.tbLastNameReg.Size = new System.Drawing.Size(100, 22);
-            this.tbLastNameReg.TabIndex = 5;
+            this.tbLastNameReg.TabIndex = 4;
             this.tbLastNameReg.Enter += new System.EventHandler(this.tbLastNameReg_Enter);
             this.tbLastNameReg.Leave += new System.EventHandler(this.tbLastNameReg_Leave);
             // 
@@ -104,7 +104,7 @@ namespace Farmacy
             this.tbCountryReg.Location = new System.Drawing.Point(293, 270);
             this.tbCountryReg.Name = "tbCountryReg";
             this.tbCountryReg.Size = new System.Drawing.Size(100, 22);
-            this.tbCountryReg.TabIndex = 6;
+            this.tbCountryReg.TabIndex = 10;
             this.tbCountryReg.Enter += new System.EventHandler(this.tbCountryReg_Enter);
             this.tbCountryReg.Leave += new System.EventHandler(this.tbCountryReg_Leave);
             // 
@@ -113,7 +113,7 @@ namespace Farmacy
             this.tbStreetReg.Location = new System.Drawing.Point(293, 48);
             this.tbStreetReg.Name = "tbStreetReg";
             this.tbStreetReg.Size = new System.Drawing.Size(100, 22);
-            this.tbStreetReg.TabIndex = 7;
+            this.tbStreetReg.TabIndex = 6;
             this.tbStreetReg.Enter += new System.EventHandler(this.tbStreetReg_Enter);
             this.tbStreetReg.Leave += new System.EventHandler(this.tbStreetReg_Leave);
             // 
@@ -122,7 +122,7 @@ namespace Farmacy
             this.tbNumberReg.Location = new System.Drawing.Point(293, 104);
             this.tbNumberReg.Name = "tbNumberReg";
             this.tbNumberReg.Size = new System.Drawing.Size(100, 22);
-            this.tbNumberReg.TabIndex = 8;
+            this.tbNumberReg.TabIndex = 7;
             this.tbNumberReg.Enter += new System.EventHandler(this.tbNumberReg_Enter);
             this.tbNumberReg.Leave += new System.EventHandler(this.tbNumberReg_Leave);
             // 
@@ -140,7 +140,7 @@ namespace Farmacy
             this.tbCityReg.Location = new System.Drawing.Point(293, 159);
             this.tbCityReg.Name = "tbCityReg";
             this.tbCityReg.Size = new System.Drawing.Size(100, 22);
-            this.tbCityReg.TabIndex = 10;
+            this.tbCityReg.TabIndex = 8;
             this.tbCityReg.Enter += new System.EventHandler(this.tbCity_Enter);
             this.tbCityReg.Leave += new System.EventHandler(this.tbCity_Leave);
             // 
@@ -149,7 +149,7 @@ namespace Farmacy
             this.tbPhoneNumberReg.Location = new System.Drawing.Point(42, 275);
             this.tbPhoneNumberReg.Name = "tbPhoneNumberReg";
             this.tbPhoneNumberReg.Size = new System.Drawing.Size(100, 22);
-            this.tbPhoneNumberReg.TabIndex = 11;
+            this.tbPhoneNumberReg.TabIndex = 5;
             this.tbPhoneNumberReg.Enter += new System.EventHandler(this.tbPhoneNumberReg_Enter);
             this.tbPhoneNumberReg.Leave += new System.EventHandler(this.tbPhoneNumberReg_Leave);
             // 
