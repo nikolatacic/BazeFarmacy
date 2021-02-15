@@ -88,7 +88,7 @@ namespace Farmacy
         {
             List<UserModel> users;
 
-            using (StreamReader r = new StreamReader("Users.json"))
+            using (StreamReader r = new StreamReader("..\\..\\Data\\Users.json"))
             {
                 string jsonUsers = r.ReadToEnd();
                 users = JsonConvert.DeserializeObject<List<UserModel>>(jsonUsers);
@@ -104,7 +104,7 @@ namespace Farmacy
         {
             List<DrugModel> drugs;
 
-            using (StreamReader r = new StreamReader("Drugs.json"))
+            using (StreamReader r = new StreamReader("..\\..\\Data\\Drugs.json"))
             {
                 string jsonDrugs = r.ReadToEnd();
                 drugs = JsonConvert.DeserializeObject<List<DrugModel>>(jsonDrugs);
@@ -115,28 +115,11 @@ namespace Farmacy
                 InsertDocument<DrugModel>("Drugs", drug);
             }
         }
-
-        private void LoadOrdersFromJSON()
-        {
-            List<OrderModel> orders;
-
-            using (StreamReader r = new StreamReader("Orders.json"))
-            {
-                string jsonOrders = r.ReadToEnd();
-                orders = JsonConvert.DeserializeObject<List<OrderModel>>(jsonOrders);
-            }
-
-            foreach (var order in orders)
-            {
-                InsertDocument<OrderModel>("Orders", order);
-            }
-        }
-
         private void LoadCartsFromJSON()
         {
             List<CartModel> carts;
 
-            using (StreamReader r = new StreamReader("Carts.json"))
+            using (StreamReader r = new StreamReader("..\\..\\Data\\Carts.json"))
             {
                 string jsonCarts = r.ReadToEnd();
                 carts = JsonConvert.DeserializeObject<List<CartModel>>(jsonCarts);
@@ -145,6 +128,22 @@ namespace Farmacy
             foreach (var cart in carts)
             {
                 InsertDocument<CartModel>("Carts", cart);
+            }
+        }
+
+        private void LoadOrdersFromJSON()
+        {
+            List<OrderModel> orders;
+
+            using (StreamReader r = new StreamReader("..\\..\\Data\\Orders.json"))
+            {
+                string jsonOrders = r.ReadToEnd();
+                orders = JsonConvert.DeserializeObject<List<OrderModel>>(jsonOrders);
+            }
+
+            foreach (var order in orders)
+            {
+                InsertDocument<OrderModel>("Orders", order);
             }
         }
     }

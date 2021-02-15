@@ -1,0 +1,33 @@
+[{
+  "Id": "189b0e81-e96b-4db3-9ab0-6e8a87a714de",
+  "CartId": "fab42dc0-90e8-4054-89ff-a2b605715afd",
+  "Privileges": 2,
+  "Username": "jaksa97",
+  "Password": "jaksa97",
+  "FirstName": "Veljko",
+  "LastName": "Jaksic",
+  "PhoneNumber": "062738915",
+  "Address": {
+    "Street": "Salvadora Dalija",
+	"Number": 25,
+    "City": "Nis",
+    "ZipCode": 18000,
+	"Country": "Serbia"
+  }
+},{
+  "Id": "1d276092-fc06-4b61-8f1e-6c17ac0be7b3",
+  "CartId": "ffda968a-3d83-486a-8012-955d86360e8e",
+  "Privileges": 1,
+  "Username": "gargos",
+  "Password": "gargos",
+  "FirstName": "Zeljko",
+  "LastName": "Kostov",
+  "PhoneNumber": "062417823", 
+  "Address": {
+    "Street": "Arhiepsikopa Danila II",
+	"Number": 20,
+    "City": "Nis",
+    "ZipCode": 18000,
+	"Country": "Serbia"
+  }
+}]

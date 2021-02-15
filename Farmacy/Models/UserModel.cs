@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 
 namespace Farmacy
@@ -8,7 +9,6 @@ namespace Farmacy
         [BsonId]
         public Guid Id { get; set; }
 
-        [BsonId]
         public Guid CartId { get; set; }
 
         public int Privileges { get; set; }

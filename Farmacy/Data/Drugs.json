@@ -1,0 +1,69 @@
+[{
+  "Id": "721a6d36-dc32-4768-95d1-068b18075687",
+  "ProductCode": 1,
+  "Name": "Brufen",
+  "Manufacturer": "Famar SA",
+  "Type": "Tablets",
+  "Instruction": {
+    "Dose": "On every 8 hours",
+	"Symptoms": [
+		"Headache",
+		"Temperature",
+		"Toothache"
+	],
+    "SideEffects": [],
+    "Warning": "None",
+	"Usage": "Drink with water"
+  },
+  "Quantity": 150,
+  "Price": 250
+},{
+  "Id": "c416279e-d52f-443f-9872-9a0486b3b29f",
+  "ProductCode": 2,
+  "Name": "Aspirin",
+  "Manufacturer": "BAYER BITTERFELD GMBH",
+  "Type": "Tablets",
+  "Instruction": {
+    "Dose": "Optionally",
+	"Symptoms": [
+		"Headache",
+		"Pains",
+		"Toothache"
+	],
+    "SideEffects": [
+		"Allergic reaction",
+		"Rash",
+		"Reye syndrome"
+	],
+    "Warning": "See side effects",
+	"Usage": "Drink with water"
+  },
+  "Quantity": 80,
+  "Price": 310
+},{
+  "Id": "bd70c602-ef2e-41fa-8fef-b6c74da231ec",
+  "ProductCode": 3,
+  "Name": "Amoxicillin",
+  "Manufacturer": "Famar SA",
+  "Type": "Tablets",
+  "Instruction": {
+    "Dose": "On every 12 hours",
+	"Symptoms": [
+		"Urinary tract infection",
+		"Gonorrhea"
+	],
+    "SideEffects": [
+		"Allergic reaction",
+		"Rash",
+		"Mild stomach upset"
+	],
+    "Warning": "See side effects",
+	"Usage": "Drink with water"
+  },
+  "Quantity": 80,
+  "Price": 310
+}
+
+
+
+]
