@@ -63,6 +63,8 @@ namespace Farmacy
             // 
             // dgv
             // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -134,6 +136,7 @@ namespace Farmacy
             this.tbProductCode.Name = "tbProductCode";
             this.tbProductCode.Size = new System.Drawing.Size(164, 22);
             this.tbProductCode.TabIndex = 2;
+            this.tbProductCode.Tag = "ProductCode";
             // 
             // tbName
             // 
@@ -141,6 +144,7 @@ namespace Farmacy
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(164, 22);
             this.tbName.TabIndex = 3;
+            this.tbName.Tag = "Name";
             // 
             // tbManufacturer
             // 
@@ -148,6 +152,7 @@ namespace Farmacy
             this.tbManufacturer.Name = "tbManufacturer";
             this.tbManufacturer.Size = new System.Drawing.Size(164, 22);
             this.tbManufacturer.TabIndex = 4;
+            this.tbManufacturer.Tag = "Manufacturer";
             // 
             // tbType
             // 
@@ -155,6 +160,7 @@ namespace Farmacy
             this.tbType.Name = "tbType";
             this.tbType.Size = new System.Drawing.Size(164, 22);
             this.tbType.TabIndex = 5;
+            this.tbType.Tag = "Type";
             // 
             // tbSyptoms
             // 
@@ -162,6 +168,7 @@ namespace Farmacy
             this.tbSyptoms.Name = "tbSyptoms";
             this.tbSyptoms.Size = new System.Drawing.Size(164, 22);
             this.tbSyptoms.TabIndex = 6;
+            this.tbSyptoms.Tag = "Symptoms";
             // 
             // label1
             // 

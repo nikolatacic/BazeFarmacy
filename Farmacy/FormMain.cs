@@ -42,12 +42,12 @@ namespace Farmacy
             var filter = Builders<DrugModel>.Filter.Empty;
             var filter2 = Builders<DrugModel>.Filter.Empty;
             var arrayTextBoxes = allTexboxes
-                                 .Where(i => String.IsNullOrEmpty(i.Text))
+                                 .Where(i => !String.IsNullOrEmpty(i.Text))
                                  .ToArray();
 
             for (int i = 0; i < arrayTextBoxes.Length; i++)
             {
-                filter2 = null;
+                filter2 = !Builders<DrugModel>.Filter.Empty;
                 if (arrayTextBoxes[i].Tag.ToString() == "Symptoms")
                 {
                     string[] parameters = arrayTextBoxes[i].Text.Split(',');
@@ -69,10 +69,11 @@ namespace Farmacy
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(user.Privileges > 0) {
-            var formInformation = new FormInformation(user, listOfDrugs[e.RowIndex]);
-            formInformation.ShowDialog();
-
+            if (user.Privileges > 0 && listOfDrugs.Count > e.RowIndex)
+            {
+                var formInformation = new FormInformation(user, listOfDrugs[e.RowIndex]);
+                formInformation.ShowDialog();
+            }
             //focus
         }
     }

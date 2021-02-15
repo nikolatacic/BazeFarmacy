@@ -16,12 +16,12 @@ namespace Farmacy
         UserModel user;
         public FormInformation(UserModel u, DrugModel d)
         {
-
+            InitializeComponent();
             drug = d;
             user = u;
             label1.Text = drug.Name;
             tbInfo.Text = drug.formatString();
-            InitializeComponent();
+
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)

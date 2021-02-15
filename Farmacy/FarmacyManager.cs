@@ -77,12 +77,16 @@ namespace Farmacy
             if (doc == null)
                 doc = new CartModel(); //If cart doesnt exist, create new
             var drugForChange = doc.DrugList.Find(d => d.ProductCode == drug.ProductCode);
-            if (drugForChange == null) {
+            if (drugForChange == null)
+            {
                 doc.DrugList.Add(drug);
                 doc.Quantity += quantity;
             }
             else
+            {
+                doc.Quantity += quantity;
                 drugForChange.Quantity += quantity;
+            }
 
             doc.Total += total;
             db.UpsertDocument("Carts", doc.Id, doc);
@@ -118,7 +122,6 @@ namespace Farmacy
         {
             if (approved)
             {
-                //BRISI CART OVDE
                 order.Shipping.CompanyName = "TestKompanija";
                 order.Shipping.EstimatedTime = DateTime.Now.AddDays(7);
                 if (!deleted)
@@ -155,7 +158,7 @@ namespace Farmacy
             };
 
 
-            //update cart status
+            db.DeleteDocument<CartModel>("Carts", c.Id);
         }
     }
 }

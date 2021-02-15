@@ -19,7 +19,7 @@ namespace Farmacy
         public string formatString()
         {
             string text = "";
-            string nl = "\n\n";
+            string nl = "\r\n\r\n";
             text += "Dose: " + Dose + nl
                 + "Symptoms: " + string.Join(", ", Symptoms) + nl
                 + "Side effects: " + string.Join(", ", SideEffects) + nl

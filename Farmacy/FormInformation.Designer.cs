@@ -79,7 +79,7 @@ namespace Farmacy
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(135, 431);
+            this.label3.Location = new System.Drawing.Point(120, 431);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 4;
@@ -91,15 +91,15 @@ namespace Farmacy
             this.lblTotal.ForeColor = System.Drawing.Color.Blue;
             this.lblTotal.Location = new System.Drawing.Point(135, 455);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(46, 17);
+            this.lblTotal.Size = new System.Drawing.Size(16, 17);
             this.lblTotal.TabIndex = 5;
-            this.lblTotal.Text = "label4";
+            this.lblTotal.Text = "0";
             // 
             // btnCart
             // 
-            this.btnCart.Location = new System.Drawing.Point(219, 444);
+            this.btnCart.Location = new System.Drawing.Point(212, 444);
             this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(85, 23);
+            this.btnCart.Size = new System.Drawing.Size(92, 23);
             this.btnCart.TabIndex = 6;
             this.btnCart.Text = "Add to cart";
             this.btnCart.UseVisualStyleBackColor = true;
