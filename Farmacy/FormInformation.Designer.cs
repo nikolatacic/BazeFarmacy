@@ -45,6 +45,7 @@ namespace Farmacy
             this.tbInfo.Location = new System.Drawing.Point(12, 42);
             this.tbInfo.Multiline = true;
             this.tbInfo.Name = "tbInfo";
+            this.tbInfo.ReadOnly = true;
             this.tbInfo.Size = new System.Drawing.Size(292, 382);
             this.tbInfo.TabIndex = 0;
             // 
