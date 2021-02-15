@@ -40,7 +40,7 @@ namespace Farmacy
 
             if (!users.Any())
             {
-                CartModel cart = new CartModel { Quantity = 0, Status = "Not confirmed", Total = 0 };
+                CartModel cart = new CartModel();
                 db.InsertDocument<CartModel>("Carts", cart);
                 user.CartId = cart.Id;
                 db.InsertDocument<UserModel>("Users", user);
@@ -68,10 +68,12 @@ namespace Farmacy
         }
         public void addToCart(UserModel user, DrugModel drug, int quantity)
         {
-            updateQuantity(drug, quantity);
+            updateQuantity(drug.ProductCode, quantity);
             drug.Quantity = quantity;
             double total = quantity * drug.Price;
             var doc = returnCart(user);
+            if (doc == null)
+                doc = new CartModel(); //If cart doesnt exist, create new
             var drugForChange = doc.DrugList.Find(d => d.ProductCode == drug.ProductCode);
             if (drugForChange == null) {
                 doc.DrugList.Add(drug);
@@ -84,10 +86,19 @@ namespace Farmacy
             db.UpsertDocument("Carts", doc.Id, doc);
 
         }
-        public void updateQuantity(DrugModel drug, int quantity)
+        public void updateQuantity(int prCode, int quantity)
         {
-            drug.Quantity -= quantity;
-            db.UpsertDocument<DrugModel>("Drugs", drug.Id, drug);
+            var filter = Builders<DrugModel>.Filter.Eq("ProductCode", prCode);
+            var drug = db.LoadDocumentByFilter("Drugs", filter).First();
+            if (drug == null)
+                return;
+            if (drug.Quantity + quantity == 0)
+                db.DeleteDocument<DrugModel>("Drugs", drug.Id);
+            else
+            {
+                drug.Quantity -= quantity;
+                db.UpsertDocument<DrugModel>("Drugs", drug.Id, drug);
+            }
         }
 
         public List<OrderModel> getOrders(string type, string username = null)
@@ -101,25 +112,48 @@ namespace Farmacy
             return db.LoadDocumentByFilter("Orders", filter);
         }
 
-        //updateOrders. klijent da potvrdi kart
-        //order treba da se popuni posle carta
-        public void updateOrders(OrderModel order, bool approved)
+        public void updateOrders(OrderModel order, bool approved, bool deleted)
         {
             if (approved)
-            { //change status i popuniti podatke
+            {
+                //BRISI CART OVDE
                 order.Shipping.CompanyName = "TestKompanija";
                 order.Shipping.EstimatedTime = DateTime.Now.AddDays(7);
-                order.Shipping.Status = "Active";
+                if (!deleted)
+                    order.Shipping.Status = "On the way";
+                else
+                    order.Shipping.Status = "Inactive";
                 db.UpsertDocument<OrderModel>("Orders", order.Id, order);
             }
             else
             {
-                var filter = Builders<UserModel>.Filter.Eq("Username", order.Shipping.CustomerUsername);
-
-                var users = db.LoadDocumentByFilter("Users", filter);
+                foreach (var v in order.DrugsList)
+                    updateQuantity(v.ProductCode, -v.Quantity);
                 db.DeleteDocument<OrderModel>("Orders", order.Id);
+
             }
                 
+        }
+
+        public void confirmCart(UserModel u, CartModel c, string notes, PaymentModel payment)
+        {
+            ShippingModel s = new ShippingModel
+            {
+                CustomerUsername = u.Username,
+                Status = "Pending"
+            };
+
+            OrderModel o = new OrderModel
+            {
+                Notes = notes,
+                OrderedOn = DateTime.Now,
+                Payment = payment,
+                Shipping = s,
+                DrugsList = c.DrugList
+            };
+
+
+            //update cart status
         }
     }
 }

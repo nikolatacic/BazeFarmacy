@@ -17,6 +17,14 @@ namespace Farmacy
 
         public List<DrugModel> DrugList { get; set; }
 
+        public CartModel()
+        {
+            Status = "Not confirmed";
+            Total = 0;
+            Quantity = 0;
+            DrugList = new List<DrugModel>();
+        }
+
     }
 
 
