@@ -12,9 +12,28 @@ namespace Farmacy
 {
     public partial class FormInformation : Form
     {
-        public FormInformation()
+        DrugModel drug;
+        public FormInformation(DrugModel d)
         {
             InitializeComponent();
+            drug = d;
+
+            label1.Text = drug.Name;
+            tbInfo.Text = drug.formatString();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            lblError.Text = "";
+            lblTotal.Text = ((double)nud.Value * drug.Price).ToString();
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            if ((int)nud.Value <= drug.Quantity)
+                FarmacyManager.Instance.addToCart(drug, (int)nud.Value);
+            else
+                lblError.Text = "There are not enough products";
         }
     }
 }

@@ -56,7 +56,12 @@ namespace Farmacy
         }
 
         public List<DrugModel> searchDrugs(FilterDefinition<DrugModel> filter)
-        { 
+        {
+            return db.LoadDocumentByFilter("Drugs", filter);
+        }
+
+        public void addToCart(DrugModel drug, int quantity)
+        {
 
         }
     }

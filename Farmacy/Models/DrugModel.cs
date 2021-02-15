@@ -21,6 +21,20 @@ namespace Farmacy
         public int Quantity { get;  set; }
 
         public double Price { get; set; }
+
+        public string formatString()
+        {
+            string text = "";
+            string nl = "\n\n";
+
+            text += "Product Code: " + ProductCode.ToString() + nl
+                + "Manufacturer: " + Manufacturer + nl
+                + "Type: " + Type + nl
+                + Instruction.formatString() + nl
+                + "Quantity: " + Quantity.ToString() + nl
+                + "Price" + Price.ToString();
+            return text;
+        }
     }
 
 

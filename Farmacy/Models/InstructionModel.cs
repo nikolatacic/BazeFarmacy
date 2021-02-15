@@ -15,6 +15,18 @@ namespace Farmacy
 
         [BsonElement("HowToUse")]
         public string Usage { get; set; }
+
+        public string formatString()
+        {
+            string text = "";
+            string nl = "\n\n";
+            text += "Dose: " + Dose + nl
+                + "Symptoms: " + string.Join(", ", Symptoms) + nl
+                + "Side effects: " + string.Join(", ", SideEffects) + nl
+                + "Warning: " + Warning + nl
+                + "Usage: " + Usage;
+            return text;
+        }
     }
 
 
