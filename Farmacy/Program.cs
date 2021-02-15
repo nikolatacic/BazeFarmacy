@@ -71,7 +71,7 @@ namespace Farmacy
             //}
 
             //var oneDoc = db.LoadDocumentById<DrugModel>("Drugs", 2);
-            //oneDoc.Price = 999;
+            //oneDoc.Price = 555;
             //db.UpsertDocument("Drugs", oneDoc.Id, oneDoc);
 
             //var oneDoc = db.LoadDocumentById<DrugModel>("Drugs", 1);
