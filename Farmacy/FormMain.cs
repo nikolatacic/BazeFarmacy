@@ -32,6 +32,7 @@ namespace Farmacy
                 dgv.Rows[index].Cells[2].Value = v.Manufacturer;
                 dgv.Rows[index].Cells[3].Value = v.Type;
                 dgv.Rows[index].Cells[4].Value = v.Quantity;
+
                 dgv.Rows[index].Cells[5].Value = v.Price;
                 dgv.ClearSelection();
             }

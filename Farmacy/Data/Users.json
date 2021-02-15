@@ -1,25 +1,41 @@
 [{
+  "Id": "b2d75317-7dbd-4215-81ee-0151a11a2a4e",
+  "CartId": "c4f20c9c-6ccf-476c-a7eb-38485e6693b5",
+  "Privileges": 2,
+  "Username": "admin",
+  "Password": "admin",
+  "FirstName": "Admin",
+  "LastName": "Admin",
+  "PhoneNumber": "111111111111111",
+  "Address": {
+    "Street": "AdminStreet",
+	"Number": 999,
+    "City": "AdminCity",
+    "ZipCode": 99999,
+	"Country": "AdminCountry"
+  }
+},{
   "Id": "189b0e81-e96b-4db3-9ab0-6e8a87a714de",
   "CartId": "fab42dc0-90e8-4054-89ff-a2b605715afd",
   "Privileges": 2,
-  "Username": "jaksa97",
-  "Password": "jaksa97",
-  "FirstName": "Veljko",
-  "LastName": "Jaksic",
-  "PhoneNumber": "062738915",
+  "Username": "NagashSRB",
+  "Password": "NagashSRB",
+  "FirstName": "Nikola",
+  "LastName": "tacic",
+  "PhoneNumber": "0631013304",
   "Address": {
-    "Street": "Salvadora Dalija",
-	"Number": 25,
-    "City": "Nis",
-    "ZipCode": 18000,
+    "Street": "Knjazevacka",
+	"Number": 69,
+    "City": "Knjazevac",
+    "ZipCode": 19350,
 	"Country": "Serbia"
   }
 },{
   "Id": "1d276092-fc06-4b61-8f1e-6c17ac0be7b3",
   "CartId": "ffda968a-3d83-486a-8012-955d86360e8e",
   "Privileges": 1,
-  "Username": "gargos",
-  "Password": "gargos",
+  "Username": "zeljkostov",
+  "Password": "zeljkostov",
   "FirstName": "Zeljko",
   "LastName": "Kostov",
   "PhoneNumber": "062417823", 

@@ -57,13 +57,50 @@
 		"Rash",
 		"Mild stomach upset"
 	],
-    "Warning": "See side effects",
+    "Warning": "Prolonged use of amoxicillin may occasionally lead to the growth of resistant microorganisms!",
 	"Usage": "Drink with water"
   },
   "Quantity": 80,
   "Price": 310
-}
-
-
-
-]
+},{
+  "Id": "c407d9f8-5130-430b-9aaa-77128438d993",
+  "ProductCode": 4,
+  "Name": "Hepatitis B vaccine",
+  "Manufacturer": "BAYER BITTERFELD GMBH",
+  "Type": "Vaccine",
+  "Instruction": {
+    "Dose": "One or more as needed",
+	"Symptoms": [
+		"Fever",
+		"Fatigue",
+		"Muscle pain",
+		"Loss of appetite"
+	],
+    "SideEffects": [],
+    "Warning": "Pain may occur at the site of injection!",
+	"Usage": "Inject"
+  },
+  "Quantity": 35,
+  "Price": 400
+},{
+  "Id": "1ca9e0df-7fa9-4c4e-9d0c-ce6058bc0235",
+  "ProductCode": 5,
+  "Name": "Sinacilin",
+  "Manufacturer": "GALENIKA AD",
+  "Type": "Capsules",
+  "Instruction": {
+    "Dose": "Before a meal",
+	"Symptoms": [
+		"Bacterial infections",
+		"Dental abscess"
+	],
+    "SideEffects": [
+		"Allergic reaction",
+		"Crystalluria"
+	],
+    "Warning": "An allergic reaction may occur",
+	"Usage": "Drink with water"
+  },
+  "Quantity": 50,
+  "Price": 280
+}]
