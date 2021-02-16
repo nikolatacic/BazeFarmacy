@@ -13,6 +13,11 @@ namespace Farmacy
 
         public string Status { get; set; }
 
+        public string formatString()
+        {
+            return "Company name: " + "Time of arrival: " + EstimatedTime.ToString();
+        }
+
     }
 
 

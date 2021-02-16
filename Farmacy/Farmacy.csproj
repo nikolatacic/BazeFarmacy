@@ -122,9 +122,17 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCart.cs" />
+    <Compile Include="FormCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormCart.Designer.cs">
       <DependentUpon>FormCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCartConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCartConfirm.Designer.cs">
+      <DependentUpon>FormCartConfirm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInformation.cs">
       <SubType>Form</SubType>
@@ -166,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCart.resx">
       <DependentUpon>FormCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCartConfirm.resx">
+      <DependentUpon>FormCartConfirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInformation.resx">
       <DependentUpon>FormInformation.cs</DependentUpon>

@@ -48,6 +48,8 @@ namespace Farmacy
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCart = new System.Windows.Forms.Button();
+            this.btnOrders = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,6 +227,26 @@ namespace Farmacy
             this.button1.Text = "Admin";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            //
+            // btnCart
+            // 
+            this.btnCart.Location = new System.Drawing.Point(689, 12);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Size = new System.Drawing.Size(75, 52);
+            this.btnCart.TabIndex = 13;
+            this.btnCart.Text = "Cart";
+            this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
+            // btnOrders
+            // 
+            this.btnOrders.Location = new System.Drawing.Point(689, 70);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Size = new System.Drawing.Size(75, 50);
+            this.btnOrders.TabIndex = 14;
+            this.btnOrders.Text = "Orders";
+            this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // FormMain
             // 
@@ -232,6 +254,8 @@ namespace Farmacy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 507);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOrders);
+            this.Controls.Add(this.btnCart);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -274,5 +298,8 @@ namespace Farmacy
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCart;
+        private System.Windows.Forms.Button btnOrders;
+
     }
 }

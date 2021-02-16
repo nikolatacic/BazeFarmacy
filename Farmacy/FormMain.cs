@@ -78,12 +78,24 @@ namespace Farmacy
             //focus
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             var formAdmin = new FormAdmin();
             formAdmin.ShowDialog();
             this.Close();
+        }
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            var formCartConfirm = new FormCartConfirm(user);
+            formCartConfirm.ShowDialog();
+        }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            var formOrder = new FormCart(user);
+            formOrder.ShowDialog();
         }
     }
 }

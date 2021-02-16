@@ -8,6 +8,11 @@
 
         public string Currency { get; set; }
 
+        public string formatString()
+        {
+            return Currency + ", Method: " + Method + "Transaction: " + TransactionId; 
+        }
+
     }
 
 

@@ -140,6 +140,13 @@ namespace Farmacy
                 
         }
 
+        public void deleteCart(Guid id)
+        {
+            CartModel cart = new CartModel();
+            cart.Id = id;
+            db.UpsertDocument<CartModel>("Carts", id, cart);
+
+        }
         public void confirmCart(UserModel u, CartModel c, string notes, PaymentModel payment)
         {
             ShippingModel s = new ShippingModel
@@ -157,8 +164,10 @@ namespace Farmacy
                 DrugsList = c.DrugList
             };
 
+            db.InsertDocument("Orders", o);
 
-            db.DeleteDocument<CartModel>("Carts", c.Id);
+
+            deleteCart(c.Id);
         }
 
         public void upsertDrug(DrugModel drug)
