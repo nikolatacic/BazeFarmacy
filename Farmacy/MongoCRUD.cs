@@ -16,7 +16,7 @@ namespace Farmacy
         {
             var client = new MongoClient();
 
-            //client.DropDatabase(database);
+            client.DropDatabase(database);
             
             db = client.GetDatabase(database);
 

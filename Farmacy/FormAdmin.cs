@@ -103,6 +103,8 @@ namespace Farmacy
 
                 FarmacyManager.Instance.upsertDrug(drug);
 
+                this.Close();
+
             }
         }
 
@@ -114,34 +116,36 @@ namespace Farmacy
 
             for (int i = 0; i < selectedRow.Count; i++)
             {
+                if (selectedRow[i].Index < listOfDrugs.Count)
+                {
+                    drug.Id = listOfDrugs[selectedRow[i].Index].Id;
 
-                drug.Id = listOfDrugs[selectedRow[i].Index].Id;
+                    drug.Name = selectedRow[i].Cells[1].Value.ToString();
+                    drug.Manufacturer = selectedRow[i].Cells[2].Value.ToString();
+                    drug.Type = selectedRow[i].Cells[3].Value.ToString();
+                    drug.Quantity = Convert.ToInt32(selectedRow[i].Cells[4].Value);
+                    drug.Price = Convert.ToInt32(selectedRow[i].Cells[5].Value);
 
-                drug.Name = selectedRow[i].Cells[1].Value.ToString();
-                drug.Manufacturer = selectedRow[i].Cells[2].Value.ToString();
-                drug.Type = selectedRow[i].Cells[3].Value.ToString();
-                drug.Quantity = Convert.ToInt32(selectedRow[i].Cells[4].Value);
-                drug.Price = Convert.ToInt32(selectedRow[i].Cells[5].Value);
+                    InstructionModel instruction = new InstructionModel();
+                    instruction.Dose = selectedRow[i].Cells[6].Value.ToString();
 
-                InstructionModel instruction = new InstructionModel();
-                instruction.Dose = selectedRow[i].Cells[6].Value.ToString();
+                    string[] symptoms = selectedRow[i].Cells[7].Value.ToString().Split(' ');
+                    instruction.Symptoms = symptoms;
 
-                string[] symptoms = selectedRow[i].Cells[7].Value.ToString().Split(' ');
-                instruction.Symptoms = symptoms;
+                    string[] sideEffects = selectedRow[i].Cells[8].Value.ToString().Split(' ');
+                    instruction.SideEffects = sideEffects;
 
-                string[] sideEffects = selectedRow[i].Cells[8].Value.ToString().Split(' ');
-                instruction.SideEffects = sideEffects;
+                    instruction.Warning = selectedRow[i].Cells[9].Value.ToString();
+                    instruction.Usage = selectedRow[i].Cells[10].Value.ToString();
 
-                instruction.Warning = selectedRow[i].Cells[9].Value.ToString();
-                instruction.Usage = selectedRow[i].Cells[10].Value.ToString();
+                    drug.Instruction = instruction;
 
-                drug.Instruction = instruction;
+                    FarmacyManager.Instance.deleteDrug(drug);
 
-                FarmacyManager.Instance.deleteDrug(drug);
+                    dgvDrugList.Rows.Clear();
 
-                dgvDrugList.Rows.Clear();
-
-                fillList();
+                    fillList();
+                }
             }
         }
     }
