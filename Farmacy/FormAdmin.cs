@@ -132,7 +132,6 @@ namespace Farmacy
                 string[] sideEffects = selectedRow[i].Cells[8].Value.ToString().Split(' ');
                 instruction.SideEffects = sideEffects;
 
-
                 instruction.Warning = selectedRow[i].Cells[9].Value.ToString();
                 instruction.Usage = selectedRow[i].Cells[10].Value.ToString();
 

@@ -16,7 +16,7 @@ namespace Farmacy
         {
             var client = new MongoClient();
 
-            client.DropDatabase(database);
+            //client.DropDatabase(database);
             
             db = client.GetDatabase(database);
 
@@ -69,7 +69,7 @@ namespace Farmacy
             return collection.Find(filter).ToList();
         }
 
-        public void UpsertDocument<T>(string table, Guid id, T document) // ako postoji update-uje ako ne napravi novi
+        public void UpsertDocument<T>(string table, Guid id, T document)
         {
             var collection = db.GetCollection<T>(table);
 

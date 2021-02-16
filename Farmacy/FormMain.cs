@@ -19,6 +19,12 @@ namespace Farmacy
         {
             user = u;
             InitializeComponent();
+            if (user.Privileges == 2)
+                button1.Visible = true;
+            else
+            {
+                button1.Visible = false;
+            }
         }
 
         private void fillList()
@@ -32,7 +38,6 @@ namespace Farmacy
                 dgv.Rows[index].Cells[2].Value = v.Manufacturer;
                 dgv.Rows[index].Cells[3].Value = v.Type;
                 dgv.Rows[index].Cells[4].Value = v.Quantity;
-
                 dgv.Rows[index].Cells[5].Value = v.Price;
                 dgv.ClearSelection();
             }
@@ -64,7 +69,7 @@ namespace Farmacy
                 filter &= filter2;
             }
             listOfDrugs = FarmacyManager.Instance.searchDrugs(filter).Distinct().ToList();
-            fillList(); //obrada podataka
+            fillList();
 
         }
 
@@ -75,16 +80,13 @@ namespace Farmacy
                 var formInformation = new FormInformation(user, listOfDrugs[e.RowIndex]);
                 formInformation.ShowDialog();
             }
-            //focus
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             var formAdmin = new FormAdmin();
             formAdmin.ShowDialog();
-            this.Close();
         }
         private void btnCart_Click(object sender, EventArgs e)
         {

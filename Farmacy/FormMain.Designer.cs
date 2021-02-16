@@ -220,14 +220,14 @@ namespace Farmacy
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(830, 460);
+            this.button1.Location = new System.Drawing.Point(775, 45);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 46);
             this.button1.TabIndex = 13;
             this.button1.Text = "Admin";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            //
+            // 
             // btnCart
             // 
             this.btnCart.Location = new System.Drawing.Point(689, 12);
@@ -252,7 +252,7 @@ namespace Farmacy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 507);
+            this.ClientSize = new System.Drawing.Size(869, 507);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOrders);
             this.Controls.Add(this.btnCart);
