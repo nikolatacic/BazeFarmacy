@@ -35,7 +35,6 @@ namespace Farmacy
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            //check if username is legit
             UserModel temp = FarmacyManager.Instance.logIn(tbUsername.Text, tbPassword.Text);
             if (temp != null)
             {

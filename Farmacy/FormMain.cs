@@ -22,9 +22,19 @@ namespace Farmacy
             if (user.Privileges == 2)
                 button1.Visible = true;
             else
-            {
                 button1.Visible = false;
+
+            if (user.Privileges == 0)
+            {
+                btnCart.Visible = false;
+                btnOrders.Visible = false;
             }
+            else
+            {
+                btnCart.Visible = true;
+                btnOrders.Visible = true;
+            }
+
         }
 
         private void fillList()
