@@ -1,12 +1,11 @@
-# BazeFarmacy
-III Projekat: Farmacy - Windows Form aplikacija koja simulira online kupovinu u nekoj apoteci
-  16417 Nikola Tacic, 16104 Marko Ilic, 16149 Zeljko Kostov
+# Subject: Databases (MongoDB)
 
+Pharmacy - Windows Form application that simulates online shopping from pharmacy store.
+Software and technologies used: MongoDB, Visual Studio, NuGet plugins for VS (MongoDB driver and Newtonsoft.Json)
 
-Za koriscenje potrebno: MongoDB, Visual Studio, NuGet dodatak za VS (MongoDB driver i Newtonsoft.Json)
+**Short features description:**
 
-Kratak opis funkcionalnosti: Ukoliko korisnik vec ima nalog, moze se ulogovati na prvoj formi aplikacije. Ukoliko to nije slucaj,
-moze da se registruje ili nastavi kao gost. Svi korisnici na pocetnoj strani mogu da koriste pretragu farmaceutske kuce. Ukoliko je korisnik ulogovan, imace
-jos nekoliko mogucnosti. Moze levim klikom u listi lekova da procita detalje za taj lek i doda u cart. Takodje, korisnik moze da pregleda svoj kart, potvrdi i poruci
-proizvode, ili da odbaci trenutni cart. Osim toga, moze da pregleda sve svoje porudzbine do sada. Ako je korisnik administrator, moze da odobrava porudzbine drugim
-korisnicima, kao i da dodaje nove lekove i menja ili brise postojece
+If user already has account, he can log in from the first application form. If that's not the case, he can register or continue as guest. All users can use search to view product
+from pharmacy company on the homepage. If user is logged in, he will have additional options. He can use left click in drugs list to see drug detail and then add it to card. Also, user can 
+view his cart, confirm and order products, or do discard current card. Besides that, he can look through all his other orders he ordered before. If user is an administrator, he can allow
+orders for other users, and he can also add new products or modify existing ones
